@@ -4,7 +4,11 @@ def main():
 
         print(word_count(file_contents))
         char_count = character_count(file_contents)
-        print(char_count)
+        
+
+        #prints characters from a-z and how many times they were used in the string returned from character_count()
+        for x , y in char_count.items(): #iterates through each key value pair and returns the key character and the value paired with it.
+            print(f"The {x} character was found {y} times.") #fStrings are amazing.
 
 
 def word_count(text):
@@ -22,6 +26,8 @@ def character_count(text):
             character_dict[x] += 1
 
     return character_dict
+
+
 
 
 main()
